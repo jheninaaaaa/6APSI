@@ -8,6 +8,7 @@ body, html {
 .loginContainer {
     display: flex;
     height: 100vh;
+    font-family: "Poppins";
 }
 
 .leftSection {
@@ -19,6 +20,7 @@ body, html {
     justify-content: center;
     padding: 80px;
     position: relative;
+    font-family: "Poppins";
 }
 
 .slogan h2 {
