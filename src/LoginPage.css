@@ -11,9 +11,23 @@ body, html {
     font-family: "Poppins";
 }
 
+.backIcon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    color: #060606;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.backIcon:hover {
+    color: hsl(349, 34%, 47%);
+}
+
 .leftSection {
     flex: 1;
-    background: radial-gradient(circle at top left, hsl(349, 48%, 26%), #000);
+    background: radial-gradient(circle at top left, hsl(349, 48%, 26%), #060606);
     color: white;
     display: flex;
     flex-direction: column;
@@ -25,7 +39,7 @@ body, html {
 
 .slogan h2 {
     margin: 0;
-    font-size: 28px;
+    font-size: 32px;
 }
 
 .slogan h2 strong {
@@ -34,7 +48,7 @@ body, html {
 
 .rightSection {
     flex: 1;
-    background-color: #000;
+    background-color: #060606;
     color: white;
     display: flex;
     justify-content: left;
@@ -93,5 +107,20 @@ body, html {
 }
 
 .loginButton:hover {
-    background-color:hsl(349, 32%, 30%);
+    background-color: hsl(349, 58%, 28%);
 }
+
+.fade-in {
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(50vh);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    }

@@ -28,7 +28,7 @@ body {
 }
 
 button {
-    background-color: hsl(349, 34%, 47%);
+    background-color: hsl(349, 58%, 28%);
     border: none;
     border-radius: 5px;
     font-weight: bold;
@@ -39,5 +39,5 @@ button {
 }
 
 button:hover {
-    background-color: hsl(349, 32%, 30%);
+    background-color:   hsl(349, 34%, 47%);
 }

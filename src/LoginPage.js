@@ -1,39 +1,49 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './LoginPage.css';
+import { FaAngleLeft } from 'react-icons/fa';
+import LandingPage from './LandingPage';
 
 function LoginPage() {
+  const [fade, setFade] = useState(false);
+
+  useEffect(() => {
+    setFade(true);
+  }, []);
+
+  const [goTo, setGoTo] = useState(false);
+      const GoToLanding = (val) => {
+          setGoTo(true)
+      };
+  
+      if (goTo){
+          return <LandingPage />;
+      };
+
   return (
-    <div class="loginContainer">
-      {}
-      <div class="leftSection">
-          <div class="slogan">
-            <h2>Hello, World!</h2>
-            <h2><strong>Be Good To Me</strong></h2>
-          </div>
+    <div className={`loginContainer ${fade ? 'fade-in' : ''}`}>
+      <div className="leftSection">
+            <FaAngleLeft className="backIcon" onClick={GoToLanding} />
+        <div className="slogan">
+          <h2>Hello, World!</h2>
+          <h2><strong>Be Good To Me</strong></h2>
+        </div>
       </div>
 
-      {}
-      <div class="rightSection">
-        <div class="loginBox">
-          <h2 class="loginTitle">Login</h2>
+      <div className="rightSection">
+        <div className="loginBox">
+          <h2 className="loginTitle">Login</h2>
 
-          <div class="inputGroup">
-            <label>Username </label>
+          <div className="inputGroup">
+            <label>Username</label>
             <input type="email" placeholder="Enter username" />
           </div>
 
-          <div class="inputGroup">
+          <div className="inputGroup">
             <label>Password</label>
             <input type="password" placeholder="••••••••" />
           </div>
 
-          <div class="rememberMe">
-            <input type="checkbox" id="remember" />
-            <label htmlFor="remember">Remember me</label>
-          </div>
-
-          <button class="loginButton">Login</button>
-
+          <button className="loginButton">Login</button>
         </div>
       </div>
     </div>
